@@ -30,6 +30,8 @@ import { DocumentModule } from './document/document.module';
 import { LabelFieldComponent } from './label/label-field.component';
 import { MarkdownModule } from '../markdown/markdown.module';
 import { FormValidatorsService } from '../../core/form/form-validators.service';
+import { WriteDateTimeFieldComponent } from './date-time/write-date-time-field.component';
+import { ReadDateTimeFieldComponent } from './date-time/read-date-time-field.component';
 
 @NgModule({
   imports: [
@@ -59,6 +61,7 @@ import { FormValidatorsService } from '../../core/form/form-validators.service';
     ReadEmailFieldComponent,
     ReadPhoneUKFieldComponent,
     ReadDateFieldComponent,
+    ReadDateTimeFieldComponent,
     ReadCollectionFieldComponent,
 
     // Write
@@ -69,6 +72,7 @@ import { FormValidatorsService } from '../../core/form/form-validators.service';
     WriteNumberFieldComponent,
     WriteEmailFieldComponent,
     WriteDateFieldComponent,
+    WriteDateTimeFieldComponent,
   ],
   entryComponents: [
     UnsupportedFieldComponent,
@@ -81,6 +85,7 @@ import { FormValidatorsService } from '../../core/form/form-validators.service';
     ReadEmailFieldComponent,
     ReadPhoneUKFieldComponent,
     ReadDateFieldComponent,
+    ReadDateTimeFieldComponent,
     ReadCollectionFieldComponent,
 
     // Write
@@ -91,6 +96,7 @@ import { FormValidatorsService } from '../../core/form/form-validators.service';
     WriteNumberFieldComponent,
     WriteEmailFieldComponent,
     WriteDateFieldComponent,
+    WriteDateTimeFieldComponent,
   ],
   exports: [
     BaseFieldModule,

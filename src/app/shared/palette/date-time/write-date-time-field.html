@@ -1,0 +1,15 @@
+<div class="form-group" [id]="id()" [ngClass]="{'form-group-error': !dateTimeControl.valid && dateTimeControl.touched}">
+
+  <fieldset>
+    <legend>
+      <span class="form-label-bold" *ngIf="caseField.label">{{caseField | ccdFieldLabel }}</span>
+      <span class="form-hint" *ngIf="caseField.hint_text">{{caseField.hint_text}}</span>
+      <span class="error-message" *ngIf="dateTimeControl.errors && dateTimeControl.touched">{{dateTimeControl.errors | ccdFirstError}}</span>
+    </legend>
+
+    <cut-date-time-input [id]="id()"
+                    [mandatory]="caseField | ccdIsMandatory"
+                    [formControl]="dateTimeControl"></cut-date-time-input>
+
+  </fieldset>
+</div>

@@ -29,6 +29,8 @@ import { WriteDocumentFieldComponent } from './document/write-document-field.com
 import { LabelFieldComponent } from './label/label-field.component';
 import { WriteAddressFieldComponent } from './address/write-address-field.component';
 import { CaseField } from '../domain/definition/case-field.model';
+import { WriteDateTimeFieldComponent } from './date-time/write-date-time-field.component';
+import { ReadDateTimeFieldComponent } from './date-time/read-date-time-field.component';
 
 @Injectable()
 export class PaletteService {
@@ -50,6 +52,8 @@ export class PaletteService {
         return write ? WritePhoneUKFieldComponent : ReadPhoneUKFieldComponent;
       case 'Date':
         return write ? WriteDateFieldComponent : ReadDateFieldComponent;
+      case 'DateTime':
+        return write ? WriteDateTimeFieldComponent : ReadDateTimeFieldComponent;
       case 'MoneyGBP':
         return write ? WriteMoneyGbpFieldComponent : ReadMoneyGbpFieldComponent;
       case 'FixedList':

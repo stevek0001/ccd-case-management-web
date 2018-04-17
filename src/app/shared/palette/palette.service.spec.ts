@@ -28,6 +28,8 @@ import { ReadDocumentFieldComponent } from './document/read-document-field.compo
 import { WriteDocumentFieldComponent } from './document/write-document-field.component';
 import { CaseField }  from '../domain/definition/case-field.model';
 import { WriteAddressFieldComponent } from './address/write-address-field.component';
+import { WriteDateTimeFieldComponent } from './date-time/write-date-time-field.component';
+import { ReadDateTimeFieldComponent } from './date-time/read-date-time-field.component';
 
 describe('PaletteService', () => {
 
@@ -111,6 +113,14 @@ describe('PaletteService', () => {
 
     it('should get WriteDateField component class for Date input', () => {
       assertComponent('Date', true, WriteDateFieldComponent, 'AnID');
+    });
+
+    it('should get ReadDateTimeField component class for Date input', () => {
+      assertComponent('DateTime', false, ReadDateTimeFieldComponent, 'AnID');
+    });
+
+    it('should get WriteDateTimeField component class for Date input', () => {
+      assertComponent('DateTime', true, WriteDateTimeFieldComponent, 'AnID');
     });
 
     it('should get ReadFixedListField component class for FixedList input', () => {
